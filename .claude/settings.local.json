@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell:*)",
+      "mcp__playwright",
+      "Bash(cd /c/ps/uigen && curl -s -X POST http://localhost:3000/api/chat \\\\\n  -H \"Content-Type: application/json\" \\\\\n  -d '{\"messages\":[{\"role\":\"user\",\"content\":\"test\"}],\"files\":{}}' 2>&1)",
+      "Bash(head:*)",
+      "Bash(cd /c/ps/uigen && node -e \"const p = require\\('./node_modules/@ai-sdk/provider/dist/index.js'\\); console.log\\(Object.keys\\(p\\).filter\\(k => k.toLowerCase\\(\\).includes\\('model'\\) || k.toLowerCase\\(\\).includes\\('language'\\)\\).join\\('\\\\n'\\)\\)\" 2>&1)",
+      "Bash(cd:*)",
+      "Bash(ls /c/ps/uigen/.env* 2>/dev/null && cat /c/ps/uigen/.env.local 2>/dev/null)",
+      "Bash(node:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}
